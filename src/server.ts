@@ -12,6 +12,34 @@ const browserDistFolder = join(import.meta.dirname, '../browser');
 const app = express();
 const angularApp = new AngularNodeAppEngine();
 
+app.get('/sitemap.xml', (req, res) => {
+  const origin = `${req.protocol}://${req.get('host')}`;
+  const escapeXml = (value: string) =>
+    value
+      .replaceAll('&', '&amp;')
+      .replaceAll('"', '&quot;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;');
+  const englishUrl = escapeXml(`${origin}/en`);
+  const arabicUrl = escapeXml(`${origin}/ar`);
+
+  res.type('application/xml').send(`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>${englishUrl}</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="${englishUrl}" />
+    <xhtml:link rel="alternate" hreflang="ar" href="${arabicUrl}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${englishUrl}" />
+  </url>
+  <url>
+    <loc>${arabicUrl}</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="${englishUrl}" />
+    <xhtml:link rel="alternate" hreflang="ar" href="${arabicUrl}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${englishUrl}" />
+  </url>
+</urlset>`);
+});
+
 /**
  * Example Express Rest API endpoints can be defined here.
  * Uncomment and define endpoints as necessary.
