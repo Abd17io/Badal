@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fbfaf6" />
+    <meta
+      name="description"
+      content="Learn how Badal handles information when you browse, list, and exchange items."
+    />
+    <title>Privacy Policy — Badal</title>
+    <link rel="icon" type="image/png" href="/app-icon.png" />
+    <style>
+      :root {
+        color-scheme: light;
+        --teal: #00b8ac;
+        --teal-dark: #087c72;
+        --ink: #173c38;
+        --muted: #62736f;
+        --paper: #fbfaf6;
+        --line: #e7ece7;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        min-width: 320px;
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      a { color: var(--teal-dark); }
+      .site-header {
+        width: min(1160px, calc(100% - 64px));
+        min-height: 92px;
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--ink);
+        font-size: 1.35rem;
+        font-weight: 800;
+        letter-spacing: -.07em;
+        text-decoration: none;
+      }
+      .brand img { width: 44px; height: 44px; border-radius: 14px; object-fit: cover; }
+      .brand-dot { color: var(--teal); }
+      .home-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 12px 17px;
+        border: 1px solid #dfe9e4;
+        border-radius: 999px;
+        color: var(--ink);
+        font-size: .88rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background .2s ease, border-color .2s ease;
+      }
+      .home-link:hover { border-color: #b6e4dc; background: #eaf8f5; }
+      .home-link span { color: var(--teal-dark); }
+      .page-intro {
+        padding: 70px 24px 86px;
+        background: #eaf7f3;
+        text-align: center;
+      }
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--teal-dark);
+        font-size: .75rem;
+        font-weight: 800;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+      h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; letter-spacing: -.04em; }
+      h1 { margin: 0 0 13px; font-size: clamp(2.8rem, 6vw, 4.5rem); line-height: 1.05; }
+      .updated { margin: 0; color: var(--muted); font-size: .9rem; }
+      main { width: min(860px, calc(100% - 40px)); margin: -35px auto 90px; position: relative; }
+      .policy-card {
+        padding: clamp(25px, 6vw, 58px);
+        border: 1px solid #edf0e9;
+        border-radius: 24px;
+        background: #fff;
+        box-shadow: 0 18px 55px #17463b12;
+      }
+      .draft-note, .summary {
+        margin: 0 0 28px;
+        padding: 18px 20px;
+        border: 1px solid #dceee8;
+        border-radius: 15px;
+        background: #f1faf7;
+        color: #355a53;
+        font-size: .94rem;
+        line-height: 1.75;
+      }
+      .draft-note { border-color: #f2e5bd; background: #fff9e9; color: #6a562a; }
+      .summary { margin-bottom: 38px; }
+      .policy-card > p:not(.draft-note):not(.summary) { color: var(--muted); line-height: 1.8; }
+      h2 { margin: 42px 0 14px; font-size: 1.85rem; line-height: 1.2; }
+      h3 { margin: 25px 0 9px; font-size: 1.25rem; }
+      p, li { color: var(--muted); font-size: .96rem; line-height: 1.8; }
+      p { margin: 0 0 16px; }
+      ul { display: grid; gap: 8px; margin: 10px 0 20px; padding-inline-start: 23px; }
+      li::marker { color: var(--teal-dark); }
+      strong { color: var(--ink); }
+      .contact-card { margin-top: 20px; padding: 20px; border-radius: 15px; background: #f8f6f0; }
+      .contact-card p:last-child { margin-bottom: 0; }
+      .site-footer {
+        min-height: 84px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 20px;
+        background: #080b0a;
+        color: #d6dcda;
+        text-align: center;
+        font-size: .82rem;
+      }
+      .site-footer a { color: #fff; font-weight: 700; text-decoration: none; }
+      .site-footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      @media (max-width: 600px) {
+        .site-header { width: calc(100% - 40px); min-height: 76px; }
+        .brand { gap: 8px; font-size: 1.18rem; }
+        .brand img { width: 38px; height: 38px; border-radius: 12px; }
+        .home-link { gap: 6px; padding: 10px 12px; font-size: .8rem; }
+        .page-intro { padding-block: 54px 70px; }
+        main { width: calc(100% - 28px); margin-bottom: 55px; }
+        .policy-card { border-radius: 19px; }
+        h2 { margin-top: 34px; font-size: 1.6rem; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Badal home">
+        <img src="/app-icon.png" alt="" width="44" height="44" />
+        <span>Badal<span class="brand-dot">.</span></span>
+      </a>
+      <a class="home-link" href="/">
+        <span aria-hidden="true">←</span>
+        Back to Badal
+      </a>
+    </header>
+
+    <section class="page-intro" aria-labelledby="page-title">
+      <p class="eyebrow">Your trust matters</p>
+      <h1 id="page-title">Privacy Policy</h1>
+      <p class="updated">Last updated: November 9, 2026</p>
+    </section>
+
+    <main>
+      <article class="policy-card">
+        <p class="draft-note">
+          <strong>Draft for review:</strong> This policy is based on Badal’s currently described features.
+          Confirm it against the live app’s actual data collection, storage, service providers, and
+          applicable legal requirements before publishing.
+        </p>
+
+        <p>
+          This Privacy Policy explains how Badal (“we,” “us,” or “our”) may collect, use, share, and
+          protect information when you use the Badal application and related services. Badal helps
+          people list items, discover items listed by others, and send and manage exchange requests.
+        </p>
+        <p>
+          By using Badal, you acknowledge the practices described here. If you do not agree, please
+          do not use the application.
+        </p>
+        <div class="summary">
+          <strong>In short:</strong> Badal processes information needed to manage accounts and listings,
+          show items to other users, handle exchange requests, and operate and protect the service.
+          Information you include in a listing may be visible to other users.
+        </div>
+
+        <h2>1. Information We May Collect</h2>
+        <h3>1.1 Account information</h3>
+        <p>
+          When you create or use an account, we may process information such as your name or display
+          name, email address, account identifier, sign-in details, language choice, and other account
+          settings. The exact information depends on the sign-in options and features available.
+        </p>
+
+        <h3>1.2 Listings and item information</h3>
+        <p>
+          When you post an item, we process the information you provide so that we can display and
+          manage the listing. This may include item names in Arabic or English, descriptions, photos,
+          category, transaction type, and listing status.
+        </p>
+
+        <h3>1.3 Exchange requests and app activity</h3>
+        <p>
+          We process information about exchange requests, including the items involved, request status,
+          and actions such as accepting or declining an offer. We may also process information needed
+          to provide in-app notifications and maintain your listing and request history.
+        </p>
+
+        <h3>1.4 Device and diagnostic information</h3>
+        <p>
+          The application or its service providers may receive technical information needed to deliver
+          and protect the service, such as device and app version, language, IP address, connection
+          details, and error or performance diagnostics. The information actually collected depends on
+          the production configuration.
+        </p>
+
+        <h2>2. How We Use Information</h2>
+        <p>We may use information for purposes such as:</p>
+        <ul>
+          <li>Creating, authenticating, and managing user accounts.</li>
+          <li>Publishing, displaying, editing, and removing item listings.</li>
+          <li>Helping users discover items and filter listings.</li>
+          <li>Sending, receiving, and managing exchange requests and related notifications.</li>
+          <li>Providing support and responding to questions or requests.</li>
+          <li>Maintaining, troubleshooting, and improving the application.</li>
+          <li>Protecting users and the service, including detecting misuse and security incidents.</li>
+          <li>Meeting legal requirements and enforcing applicable terms.</li>
+        </ul>
+
+        <h2>3. What Other Users Can See</h2>
+        <p>
+          Item listings are intended to be discovered by other Badal users. The item name, photos,
+          description, category, and transaction type you submit may therefore be shown to other users.
+          When you send or receive an exchange request, relevant details about the request and the
+          items involved may be shared with the other participant so they can review and respond.
+        </p>
+        <p>
+          Please do not include sensitive personal information in public listing fields or item photos.
+          Review your listing before publishing it.
+        </p>
+
+        <h2>4. Service Providers and Sharing</h2>
+        <p>
+          We may allow trusted providers who help operate, host, maintain, secure, or support Badal to
+          process information on our behalf. The providers and services used depend on the app’s actual
+          production setup; their identities and roles should be confirmed before this policy is
+          published.
+        </p>
+        <p>
+          We do not sell personal information. We may also disclose information when required by law,
+          to respond to valid legal requests, to protect users or our rights, or in connection with a
+          business reorganization or transfer.
+        </p>
+
+        <h2>5. Data Retention and Deletion</h2>
+        <p>
+          We keep information for as long as reasonably necessary to provide Badal, maintain account
+          and listing functionality, handle exchange requests, meet legal obligations, resolve
+          disputes, and protect the service. Retention periods may differ by information type and
+          purpose.
+        </p>
+        <p>
+          You can manage or remove your listings through the app’s My Items area. To request account
+          deletion or ask about information associated with your account, contact us using the details
+          below. Some information may be retained when required by law or needed for legitimate
+          security and recordkeeping purposes.
+        </p>
+
+        <h2>6. Your Choices and Privacy Rights</h2>
+        <p>
+          Depending on where you live, applicable law may give you rights to request access to,
+          correction of, deletion of, or a copy of your personal information, or to object to or
+          restrict some processing. You can also choose what information you include in a listing and
+          remove listings you no longer want to share.
+        </p>
+        <p>
+          To make a privacy request, contact us below. We may need to verify your identity and may be
+          unable to fulfill a request in full where an exception under applicable law applies.
+        </p>
+
+        <h2>7. Children’s Privacy</h2>
+        <p>
+          Badal is not intended for children who are below the minimum age for using the service under
+          applicable law. We do not knowingly seek to collect children’s personal information in
+          violation of those laws. If you believe a child has provided information improperly, please
+          contact us so we can review the matter.
+        </p>
+
+        <h2>8. Security and International Processing</h2>
+        <p>
+          We use reasonable safeguards intended to protect information, but no method of storage or
+          transmission is completely secure. Information may be processed in countries other than the
+          one where you live, depending on where Badal and its service providers operate.
+        </p>
+
+        <h2>9. Third-Party Services</h2>
+        <p>
+          Badal may rely on third-party infrastructure or link to external services. Their handling of
+          information is governed by their own privacy policies. We will identify relevant providers
+          here if they are used by the production application.
+        </p>
+
+        <h2>10. Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy as Badal, our data practices, or legal requirements change.
+          We will update the date above when we make changes. Please review this page periodically.
+        </p>
+
+        <h2>11. Contact Us</h2>
+        <div class="contact-card">
+          <p>For questions, privacy requests, or account-deletion requests, contact Badal:</p>
+          <p><strong>Email:</strong> <a href="mailto:kalemah@tulips-techs.com">kalemah@tulips-techs.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+962791154321">+962 79 115 4321</a></p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Badal. All rights reserved.</span>
+      <span>Powered by <a href="https://tulips-techs.com/" target="_blank" rel="noopener noreferrer">Tulips Technologies</a></span>
+    </footer>
+  </body>
+</html>

@@ -5,6 +5,8 @@
 /tmp
 /out-tsc
 /bazel-out
+/3rdpartylicenses.txt
+/prerendered-routes.json
 
 # Node
 /node_modules
