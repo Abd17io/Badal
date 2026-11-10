@@ -114,13 +114,15 @@
       strong { color: var(--ink); }
       .contact-card { margin-top: 20px; padding: 20px; border-radius: 15px; background: #f8f6f0; }
       .contact-card p:last-child { margin-bottom: 0; }
+      .contact-value { display: inline-block; direction: ltr; unicode-bidi: isolate; text-align: start; }
       .site-footer {
-        min-height: 84px;
+        min-height: 100px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 8px;
-        padding: 20px;
+        gap: 10px;
+        padding: 18px 20px;
         background: #080b0a;
         color: #d6dcda;
         text-align: center;
@@ -309,15 +311,18 @@
         <h2>11. Contact Us</h2>
         <div class="contact-card">
           <p>For questions, privacy requests, or account-deletion requests, contact Badal:</p>
-          <p><strong>Email:</strong> <a href="mailto:kalemah@tulips-techs.com">kalemah@tulips-techs.com</a></p>
-          <p><strong>Phone:</strong> <a href="tel:+962791154321">+962 79 115 4321</a></p>
+          <p><strong>Email:</strong> <a href="mailto:badal@tulips-techs.com"><span class="contact-value" dir="ltr">badal@tulips-techs.com</span></a></p>
+          <p><strong>Phone:</strong> <a href="tel:+962791151234"><span class="contact-value" dir="ltr">+962 79 115 1234</span></a></p>
         </div>
       </article>
     </main>
 
     <footer class="site-footer">
-      <span>© 2026 Badal. All rights reserved.</span>
+      <span>© <span data-current-year></span> Badal. All rights reserved.</span>
       <span>Powered by <a href="https://tulips-techs.com/" target="_blank" rel="noopener noreferrer">Tulips Technologies</a></span>
     </footer>
+    <script>
+      document.querySelector('[data-current-year]').textContent = String(new Date().getFullYear());
+    </script>
   </body>
 </html>
