@@ -10,14 +10,14 @@
   </nav>
 
   <div class="header-actions">
-    <button
+    <a
       class="language-toggle"
-      type="button"
+      [routerLink]="language() === 'en' ? '/ar' : '/en'"
       [attr.aria-label]="copy().languageSwitchLabel"
-      (click)="toggleLanguage()"
+      (click)="rememberLanguage(language() === 'en' ? 'ar' : 'en')"
     >
       {{ copy().languageSwitch }}
-    </button>
+    </a>
     <a class="header-cta" href="#how-it-works">
       {{ copy().headerCta }}
       <span aria-hidden="true">↗</span>
@@ -46,7 +46,7 @@
           </svg>
           <span class="play-store-copy">
             <span class="play-store-overline">{{ copy().playStoreOverline }}</span>
-            <span class="play-store-name">Google Play</span>
+            <span class="play-store-name"><bdi>Google Play</bdi></span>
             <span class="play-store-status">{{ copy().playStoreStatus }}</span>
           </span>
         </button>
@@ -74,7 +74,6 @@
         <span><strong>{{ copy().captionStrong }}</strong><br />{{ copy().captionText }}</span>
       </div>
       <span class="visual-orbit orbit-one" aria-hidden="true"></span>
-      <span class="visual-orbit orbit-two" aria-hidden="true"></span>
     </div>
   </section>
 
@@ -147,21 +146,21 @@
 <footer class="site-footer">
   <a class="brand footer-brand" href="#top" [attr.aria-label]="copy().homeLabel">
     <img src="/app-icon.png" alt="" width="36" height="36" />
-    <span>{{ copy().brand }}<span class="brand-dot">.</span></span>
+    <span>Badal<span class="brand-dot">.</span></span>
   </a>
   <div class="footer-actions" [attr.aria-label]="copy().contactLabel">
-    <a class="footer-contact" href="mailto:kalemah@tulips-techs.com">
+    <a class="footer-contact" href="mailto:badal@tulips-techs.com">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect x="3" y="5" width="18" height="14" rx="3"></rect>
         <path d="m4 7 8 6 8-6"></path>
       </svg>
-      <span>kalemah&#64;tulips-techs.com</span>
+      <span class="contact-value" dir="ltr">badal&#64;tulips-techs.com</span>
     </a>
-    <a class="footer-contact" href="tel:+962791154321">
+    <a class="footer-contact" href="tel:+962791151234">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M7.2 3.5h2.5l1.2 4.2-1.8 1.8a15 15 0 0 0 5.4 5.4l1.8-1.8 4.2 1.2v2.5a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.2 5.7a2 2 0 0 1 2-2.2Z"></path>
       </svg>
-      <span>+962 79 115 4321</span>
+      <span class="contact-value" dir="ltr">+962 79 115 1234</span>
     </a>
     <a class="footer-contact privacy-button" href="/privacy-policy.html">
       {{ copy().privacyPolicy }}
@@ -170,7 +169,7 @@
   <a class="back-to-top" href="#top">{{ copy().backToTop }} <span aria-hidden="true">↑</span></a>
 </footer>
 
-<div class="copyright-banner">
-  <p>© 2026 Badal. All rights reserved.</p>
+<div class="copyright-banner" lang="en" dir="ltr">
+  <p>© {{ year }} Badal. All rights reserved.</p>
   <p>Powered by <a href="https://tulips-techs.com/" target="_blank" rel="noopener noreferrer"><strong>Tulips Technologies</strong></a></p>
 </div>
