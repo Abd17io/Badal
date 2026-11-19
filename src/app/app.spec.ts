@@ -65,7 +65,7 @@ describe('App', () => {
     expect(host.querySelector('p.hero-description')?.textContent).toContain(
       'بادل أغراضك مع الآخرين، واكتشف ما تحتاجه',
     );
-    expect(host.querySelector('.play-store-status')?.textContent).toContain('قريباً');
+    expect(host.querySelector('.play-store-status')).toBeNull();
     expect(document.documentElement.lang).toBe('ar');
     expect(document.documentElement.dir).toBe('rtl');
     expect(host.querySelector<HTMLAnchorElement>('.language-toggle')?.getAttribute('href')).toBe('/en');

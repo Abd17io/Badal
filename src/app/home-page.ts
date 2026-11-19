@@ -39,7 +39,6 @@ interface PageCopy {
   tagline: string;
   playStoreLabel: string;
   playStoreOverline: string;
-  playStoreStatus: string;
   heroNote: string;
   imageTag: string;
   imageAlt: string;
@@ -82,9 +81,8 @@ const translations: Record<Language, PageCopy> = {
     heroTitle: 'Good things deserve',
     heroHighlight: 'another go.',
     tagline: 'Swap with others, discover what you need, and give good things a new chance.',
-    playStoreLabel: 'Get it on Google Play — coming soon',
+    playStoreLabel: 'Get it on Google Play',
     playStoreOverline: 'GET IT ON',
-    playStoreStatus: 'Coming soon',
     heroNote: 'A better kind of swap',
     imageTag: 'Pass it on',
     imageAlt: 'Badal: give your items a new purpose, with headphones and books being exchanged',
@@ -165,9 +163,8 @@ const translations: Record<Language, PageCopy> = {
     heroTitle: 'الأشياء الجميلة تستحق',
     heroHighlight: 'فرصة أخرى.',
     tagline: 'بادل أغراضك مع الآخرين، واكتشف ما تحتاجه، وامنح الأشياء فرصة جديدة.',
-    playStoreLabel: 'احصل عليه من Google Play — قريباً',
+    playStoreLabel: 'احصل عليه من Google Play',
     playStoreOverline: 'حمّله من',
-    playStoreStatus: 'قريباً',
     heroNote: 'تبادل بطريقة أفضل',
     imageTag: 'امنحها فرصة جديدة',
     imageAlt: 'بدل: امنح أغراضك فرصة جديدة، مع تبادل الكتب وسماعات الرأس',
